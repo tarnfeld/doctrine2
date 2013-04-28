@@ -26,8 +26,7 @@
     "bin": ["bin/doctrine", "bin/doctrine.php"],
     "extra": {
         "branch-alias": {
-            "dev-master": "2.3.x-dev",
-            "dev-fix/2.3.3/DCC-2235": "2.3.3-dev"
+            "dev-master": "2.3.x-dev"
         }
     }
 }
