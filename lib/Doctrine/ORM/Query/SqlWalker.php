@@ -400,7 +400,7 @@ class SqlWalker implements TreeWalker
             }
 
             $sqlParts[] = (($this->useSqlTableAliases) ? $this->getSQLTableAlias($class->getTableName(), $dqlAlias) . '.' : '')
-                      . $class->discriminatorColumn['name'] . ' IN (' . implode(', ', $values) . ')';
+                        . $class->discriminatorColumn['name'] . ' IN (' . implode(', ', $values) . ')';
         }
 
         $sql = implode(' AND ', $sqlParts);
@@ -781,6 +781,9 @@ class SqlWalker implements TreeWalker
 
     /**
      * Walks down a RangeVariableDeclaration AST node, thereby generating the appropriate SQL.
+     *
+     * @param AST\RangeVariableDeclaration $rangeVariableDeclaration
+     * @param boolean @rootAlias
      *
      * @return string
      */
